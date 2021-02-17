@@ -1,3 +1,16 @@
+# algm
+
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
+[![ci][ci-image]][ci-url]
+
+[npm-image]: https://img.shields.io/npm/v/algm.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/algm
+[download-image]: https://img.shields.io/npm/dm/algm.svg?style=flat-square
+[download-url]: https://npmjs.org/package/algm
+[ci-image]: https://github.com/supperchong/algm/workflows/CI/badge.svg
+[ci-url]: https://github.com/supperchong/algm/workflows/CI/badge.svg
+
 A fast algorithm library for JavaScript/TypeScript.
 
 ## Problem
@@ -9,6 +22,10 @@ When you participate in an algorithm competition or code algorithm problems onli
 ```sh
 npm install algm
 ```
+
+## Documentation
+
+You can find the algm documentation [on the website](https://algm.dev).
 
 ## Why algm?
 
