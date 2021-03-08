@@ -25,6 +25,9 @@ export {
   rotateCw90,
   c,
   cm,
+  mod,
+  bit,
+  bitCount
 } from './math'
 export { prevorder, inorder, postorder } from './tree'
 export { RBST } from './rbst'
@@ -32,4 +35,5 @@ export { MaxPQ, MinPQ } from './pq'
 export { SkipList } from './skiplist'
 export { MaxArr, SumArr, ValueArr } from './segment'
 export { UnionFind } from './unionFind'
+export * as treeNode from './treeNode'
 export * as listNode from './listNode'
