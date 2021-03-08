@@ -1,3 +1,5 @@
+import * as treeNode from './treeNode'
+import * as listNode from './listNode'
 export {
   initArray,
   init2Array,
@@ -27,7 +29,7 @@ export {
   cm,
   mod,
   bit,
-  bitCount
+  bitCount,
 } from './math'
 export { prevorder, inorder, postorder } from './tree'
 export { RBST } from './rbst'
@@ -35,5 +37,5 @@ export { MaxPQ, MinPQ } from './pq'
 export { SkipList } from './skiplist'
 export { MaxArr, SumArr, ValueArr } from './segment'
 export { UnionFind } from './unionFind'
-export * as treeNode from './treeNode'
-export * as listNode from './listNode'
+export { treeNode }
+export { listNode }
