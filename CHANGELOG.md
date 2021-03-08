@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/supperchong/algm/compare/v0.1.2...v0.1.3) (2021-03-08)
+
+
+### Features
+
+* add listNode ([76ecf13](https://github.com/supperchong/algm/commit/76ecf131d4af6f83809f8af6d4c2d153fb2ef75e))
+
 ### [0.1.2](https://github.com/supperchong/algm/compare/v0.1.1...v0.1.2) (2021-02-25)
 
 ### [0.1.1](https://github.com/supperchong/algm/compare/v0.1.0...v0.1.1) (2021-02-17)
