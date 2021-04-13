@@ -1,5 +1,7 @@
 import * as treeNode from './treeNode'
 import * as listNode from './listNode'
+export { TreeNode } from './treeNode'
+export { ListNode } from './listNode'
 export {
   initArray,
   init2Array,
