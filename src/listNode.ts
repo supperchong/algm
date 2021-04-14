@@ -1,4 +1,4 @@
-export class ListNode<T> {
+export class ListNode<T = number> {
   constructor(
     public val: T | undefined = undefined,
     public next: ListNode<T> | null = null

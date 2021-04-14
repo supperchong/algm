@@ -1,4 +1,4 @@
-export class TreeNode<T> {
+export class TreeNode<T = number> {
   constructor(
     public val: T,
     public left: TreeNode<T> | null = null,
