@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/supperchong/algm/compare/v0.1.5...v0.1.7) (2021-05-22)
+
+
+### Features
+
+* add serializeArr and deserializeArr ([d81d8f9](https://github.com/supperchong/algm/commit/d81d8f9a901a791ef25d3c5686faddb1c6614c22))
+
 ### [0.1.6](https://github.com/supperchong/algm/compare/v0.1.5...v0.1.6) (2021-04-14)
 
 ### [0.1.5](https://github.com/supperchong/algm/compare/v0.1.4...v0.1.5) (2021-04-13)
