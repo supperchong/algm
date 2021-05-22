@@ -44,6 +44,14 @@ function serialize<T = number>(root: TreeNode<T> | null): string {
   return JSON.stringify(arr)
 }
 
+function serializeArr<T = number>(arr: (TreeNode<T> | null)[]): string {
+  const outArr = []
+  for (let i = 0; i < arr.length; i++) {
+    outArr.push(serialize(arr[i]))
+  }
+  return '[' + outArr.join(',') + ']'
+}
+
 /**
  * Decodes your encoded data to tree.
  */
@@ -79,7 +87,21 @@ function deserialize<T = number>(originData: string): TreeNode<T> | null {
   return root
 }
 
-export { serialize, deserialize }
+function deserializeArr<T = number>(
+  originData: string
+): (TreeNode<T> | null)[] {
+  const data: (T | null)[][] = JSON.parse(originData)
+  if (!data.length) {
+    return []
+  }
+  let outArr: (TreeNode<T> | null)[] = []
+  for (let i = 0; i < data.length; i++) {
+    outArr.push(deserialize(JSON.stringify(data[i])))
+  }
+  return outArr
+}
+
+export { serialize, deserialize, serializeArr, deserializeArr }
 /**
  * Your functions will be called as such:
  * deserialize(serialize(root));

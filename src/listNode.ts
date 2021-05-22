@@ -18,7 +18,7 @@ export class ListNode<T = number> {
  * serialize(root) // => '[1,2,3,4,5]'
  * ```
  */
-export function serialize<T>(head: ListNode<T> | null): string {
+export function serialize<T = number>(head: ListNode<T> | null): string {
   if (!head) {
     return JSON.stringify([])
   }
@@ -29,6 +29,14 @@ export function serialize<T>(head: ListNode<T> | null): string {
     node = node.next
   }
   return JSON.stringify(arr)
+}
+
+export function serializeArr<T = number>(arr: (ListNode<T> | null)[]): string {
+  let out = []
+  for (let i = 0; i < arr.length; i++) {
+    out.push(serialize(arr[i]))
+  }
+  return '[' + out.join(',') + ']'
 }
 
 /**
@@ -45,6 +53,17 @@ export function deserialize<T = number>(
     node = node.next
   }
   return header.next
+}
+
+export function deserializeArr<T = number>(
+  originData: string
+): (ListNode<T> | null)[] {
+  const arr: T[][] = JSON.parse(originData)
+  let out: (ListNode<T> | null)[] = []
+  for (let i = 0; i < arr.length; i++) {
+    out.push(deserialize(JSON.stringify(arr[i])))
+  }
+  return out
 }
 /**
  * reverse a list
