@@ -43,5 +43,6 @@ export { MaxPQ, MinPQ } from './pq'
 export { SkipList } from './skiplist'
 export { MaxArr, SumArr, ValueArr } from './segment'
 export { UnionFind } from './unionFind'
+export { getPalindromeArr } from './manacher'
 export { treeNode }
 export { listNode }

@@ -278,3 +278,13 @@ a.mod(-2, 2); // => 0
   ]);
   // => Map(10){ 0=>6,1=>9,2=>7,3=>5,4=>8,6=>0,7=>2,8=>4,9=>1 }
   ```
+
+- `manacher`
+  a linear time algorithm to find all the palindromic substring
+  
+```js
+  import { getPalindromeArr } from 'algm';
+  const  palindromeLengthArr=getPalindromeArr('aba')
+  // The length of the palindrome centered on each vertex
+  // => [1,3,1]
+```
