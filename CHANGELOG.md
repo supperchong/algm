@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/supperchong/algm/compare/v0.1.7...v0.1.8) (2021-09-06)
+
+
+### Features
+
+* add manacher algorithm ([20190d6](https://github.com/supperchong/algm/commit/20190d670248c5544677dd24316f39067207f9c2))
+* add min vertex cover ([5ccf9c9](https://github.com/supperchong/algm/commit/5ccf9c9abe28a3db44fc671adcd74e9433d100cc))
+
 ### [0.1.7](https://github.com/supperchong/algm/compare/v0.1.5...v0.1.7) (2021-05-22)
 
 
