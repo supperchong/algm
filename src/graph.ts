@@ -1,3 +1,5 @@
+import { hopcroftKarp } from './hopcroftKarp'
+import { max } from './index'
 /**
  * Calculate the connectivity degree according to the undirected graph adjacency array.
  * @param {number[][]} adjArr adjacency array
@@ -62,4 +64,58 @@ function dfs2(index: number, set: Set<number>, isConnected: number[][]) {
       dfs(j, set, isConnected)
     }
   }
+}
+
+/**
+ * bipartite graph contains two vertex set X and Y
+ * Reference:https://en.wikipedia.org/wiki/K%C5%91nig%27s_theorem_(graph_theory)
+ * @param m the number of set X
+ * @param adjArr the adjacency array of X
+ * @param n the number of set Y
+ */
+export function minCoverVertices(m: number, adjArr: number[][], n?: number) {
+  const map = hopcroftKarp(m, adjArr)
+  if (n === undefined) {
+    n = max(adjArr.map(edge => max(edge))) + 1
+  }
+
+  let arr = []
+  let set = new Set()
+  for (let i = 0; i < m; i++) {
+    // find not matched vertex in m
+    if (!map.has(i)) {
+      set.add(i)
+      arr.push(i)
+    }
+  }
+  let isInX = true
+  while (arr.length) {
+    if (isInX) {
+      const copyArr = arr.splice(0)
+      copyArr.forEach(x => {
+        let adjVertices = adjArr[x]
+        for (let i = 0; i < adjVertices.length; i++) {
+          let y = adjVertices[i]
+          if (!set.has(y)) {
+            set.add(y)
+            const newX = map.get(y)
+            arr.push(newX)
+            set.add(newX)
+          }
+        }
+      })
+    }
+  }
+  let coverVertices = []
+  for (let i = 0; i < m; i++) {
+    if (!set.has(i)) {
+      coverVertices.push(i)
+    }
+  }
+  for (let i = m; i < n!; i++) {
+    if (set.has(i)) {
+      coverVertices.push(i)
+    }
+  }
+  return coverVertices
 }

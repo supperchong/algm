@@ -18,7 +18,11 @@ export {
   min,
   unique,
 } from './array'
-export { getConnectedNumByAdjArr, getConnectedNumByAdjMatrix } from './graph'
+export {
+  getConnectedNumByAdjArr,
+  getConnectedNumByAdjMatrix,
+  minCoverVertices,
+} from './graph'
 export { hopcroftKarp } from './hopcroftKarp'
 export { minIntervalCover, maxIntervalDisjoint, medium } from './interval'
 export {
