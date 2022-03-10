@@ -140,13 +140,9 @@ export function cm(n: number, m: number) {
  * ```
  */
 export function bit(num: number, i: number) {
-  if (num < 0) num = num * -1
+  if (num < 0) num = -num
 
-  while (i > 0) {
-    num = Math.floor(num / 2)
-    i--
-  }
-  return num % 2
+  return (num >> i) & 1
 }
 
 /**
@@ -163,11 +159,8 @@ export function bitCount(n: number) {
   let c = 0
 
   while (n) {
-    if (n % 2 === 1) {
-      c++
-    }
-
-    n = Math.floor(n / 2)
+    c += 1
+    n &= n - 1
   }
 
   return c
