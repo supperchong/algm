@@ -146,12 +146,24 @@ describe('test max', () => {
   it('should return the max value', () => {
     assert.strictEqual(max(1, 3, 2), 3)
   })
+  it('should return the max value when length is too large', () => {
+    let nums = Array(200000).fill(2)
+    nums[0] = 1
+    assert.throws(() => Math.max(...nums), RangeError)
+    assert.strictEqual(max(nums), 2)
+  })
 })
 
 describe('test min', () => {
   it('should return the min value', () => {
     assert.strictEqual(min(1, 3, 2), 1)
     assert.strictEqual(min([1, 3, 2]), 1)
+  })
+  it('should return the min value when length is too large', () => {
+    let nums = Array(200000).fill(2)
+    nums[0] = 1
+    assert.throws(() => Math.min(...nums), RangeError)
+    assert.strictEqual(min(nums), 1)
   })
 })
 

@@ -372,7 +372,7 @@ export function min(...arg: number[] | number[][]): number {
     return Math.min(...arg)
   }
 
-  let min = -Infinity
+  let min = Infinity
 
   for (const num of arg) {
     min = Math.min(min, num)
